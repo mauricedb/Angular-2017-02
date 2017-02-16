@@ -1,2 +1,10 @@
 {
+    "compilerOptions": {
+        "target": "es2015",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "noImplicitThis": true,
+"noImplicitAny": true,
+"strictNullChecks": true
+    }
 }
