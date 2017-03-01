@@ -1,0 +1,34 @@
+<p>
+  movies really works!
+</p>
+
+
+<p> 
+{{movies.length}}
+</p>
+
+<p>
+  {{name}}
+</p>
+
+
+<button (click)="onClick()">CLick me</button>
+<p>
+  <input type="text" [(ngModel)]="name">
+</p>
+
+<p>
+  <input type="text" [ngModel]="name" (ngModelChange)="name=$event">
+</p>
+
+<p>
+  <input type="text" [value]="name" (input)="name=$event.target.value">
+</p>
+
+<ul>
+  <app-movie *ngFor="let m of movies;let i=index;" 
+  [movie]="m" [i]="i"> 
+
+  </app-movie>
+</ul>
+
