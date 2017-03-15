@@ -11,13 +11,13 @@ function throwError() {
     throw new Error('aw shucks');
 }
 
-main();
+// main();
 
-// Zone.current.fork({
-//         name: 'error-logger',
-//         onHandleError: function (parentZoneDelegate, currentZone, targetZone, error) {
-//             console.log(error.stack);
-//         }
-//     })
-//     .fork(Zone.longStackTraceZoneSpec)
-//     .run(main);
+Zone.current.fork({
+        name: 'error-logger',
+        onHandleError: function (parentZoneDelegate, currentZone, targetZone, error) {
+            console.log(error.stack);
+        }
+    })
+    .fork(Zone.longStackTraceZoneSpec)
+    .run(main);
