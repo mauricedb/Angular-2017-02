@@ -1,0 +1,24 @@
+<input type="text" [(ngModel)]="case" >
+
+<p appBlink="5000" style="color: red;">
+  {{"customer-list works!" | aapje:case}}
+</p>
+
+
+
+<!--<caculator></caculator>-->
+
+
+
+
+<div *ngFor="let x of [1,2,3]">
+  <div *ngIf="true">
+    Wat text
+  </div>
+</div>
+
+<template [ngIf]="true">
+  <div>
+    Wat text
+  </div>
+</template>
