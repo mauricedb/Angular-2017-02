@@ -1,3 +1,25 @@
 <h1>
   {{title}}
 </h1>
+
+
+<my-demo> 
+
+Dit staat er al
+
+</my-demo>
+
+<!--{{ Math.random() }}-->
+
+{{eh.handleError.toString()}}
+
+<my-book [book]="book">
+
+</my-book>
+
+<div *ngFor="let b of allBooks">
+  <my-book [book]="b" (wasClicked)="itWasClicked($event)">
+
+  </my-book>
+
+</div>

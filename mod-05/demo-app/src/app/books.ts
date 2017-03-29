@@ -1,4 +1,4 @@
-export default [{
+export const books = [{
     id: 1,
     title: "The Ultimate Hitchhiker's Guide to the Galaxy",
     author: "Douglas Adams",
