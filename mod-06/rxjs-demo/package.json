@@ -1,0 +1,19 @@
+{
+  "name": "rxjs-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  }
+}

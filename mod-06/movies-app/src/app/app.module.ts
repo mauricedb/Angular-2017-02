@@ -4,17 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MoviesComponent } from './movies/movies.component';
+
+import{ MoviesService } from './movies.service';
+import { AsyncMoviesComponent } from './async-movies/async-movies.component';
+import { MoviesPresentComponent } from './movies-present/movies-present.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoviesComponent,
+    AsyncMoviesComponent,
+    MoviesPresentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MoviesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
