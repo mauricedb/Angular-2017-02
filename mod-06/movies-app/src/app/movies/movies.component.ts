@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{ MoviesService } from '../movies.service';
+import { Subscription } from 'rxjs/subscription';
+
+import { MoviesService } from '../movies.service';
 
 @Component({
   selector: 'app-movies',
@@ -9,17 +11,18 @@ import{ MoviesService } from '../movies.service';
 export class MoviesComponent implements OnInit {
 
   movies: object[];
-  cleanup;
+  moviesSubscription: Subscription;
 
-  constructor(private moviesService: MoviesService) {     
+  constructor(private moviesService: MoviesService) {
   }
 
   ngOnInit() {
-    this.cleanup =  this.moviesService.getMovies()
+    this.moviesSubscription = this.moviesService.getMovies()
       .subscribe(movies => this.movies = movies);
   }
 
   ngOnDestroy() {
-    this.cleanup();
+    console.log('Unsubscribe from movies observable')
+    this.moviesSubscription.unsubscribe();
   }
 }

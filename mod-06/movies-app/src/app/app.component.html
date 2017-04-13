@@ -3,11 +3,13 @@
 </h1>
 
 
-<app-movies>
+<label><input type="checkbox" [(ngModel)]="show">Show app-movies</label>
+
+<app-movies *ngIf="show">
 </app-movies>
 
-<app-movies>
-</app-movies>
+<!--<app-movies>
+</app-movies>-->
 
 
 <app-async-movies>
