@@ -19,4 +19,7 @@ export class TemplateMovieComponent implements OnInit {
       .subscribe(movie => this.movie = movie);
   }
 
+  save(){
+    alert('Saving')
+  }
 }

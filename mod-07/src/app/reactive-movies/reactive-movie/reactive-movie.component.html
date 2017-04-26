@@ -2,4 +2,20 @@
   Reactive based movie
 </h2>
 
-{{movie | json}}
+<form (ngSubmit)="save()" [formGroup]="movieForm">
+  <label>Title
+    <input type="text" formControlName="title">
+  </label>
+
+  <div class="error" *ngIf="errors.title">
+   {{errors.title}}
+  </div>
+
+  <label>Release
+    <input type="text" formControlName="release_date">
+  </label>
+
+<div>
+  <button [disabled]="!valid">Save</button>
+</div>
+</form>

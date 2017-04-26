@@ -2,4 +2,22 @@
   Template based movie
 </h2>
 
-{{movie | json}}
+
+<form *ngIf="movie" #movieForm="ngForm" (ngSubmit)="save()">
+  <label>Title
+    <input type="text" #titleNgModel="ngModel" name="title" [(ngModel)]="movie.title" required>
+  </label>
+  <div class="error" *ngIf="titleNgModel.errors">
+    Title is required
+  </div>
+
+
+
+  <label>Release
+    <input type="date" name="release_date" [(ngModel)]="movie.release_date">
+  </label>
+
+<div>
+  <button [disabled]="movieForm.invalid">Save</button>
+</div>
+</form>
