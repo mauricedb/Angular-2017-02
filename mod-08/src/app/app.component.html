@@ -2,8 +2,9 @@
   {{title}}
 </h1>
 
-<a href='#'>Cat</a>
-<a href='#'>Dog</a>
+<a [routerLink]="'/cat'">Cat</a>
+<a [routerLink]="'/dog'">Dog</a>
+<a [routerLink]="['/dog', 'killer', {x:1}]">Killer</a>
+<a [routerLink]="['/dog', 'puppie']">Puppie</a>
 
-<app-cat></app-cat>
-<app-dog></app-dog>
+<router-outlet></router-outlet>
