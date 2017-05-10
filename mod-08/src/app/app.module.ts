@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { CatsModule } from './cats/cats.module';
+import { DogsModule } from './dogs/dogs.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,7 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CatsModule,
+    DogsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
