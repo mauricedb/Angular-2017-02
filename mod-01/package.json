@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/jquery": "^2.0.40",
-    "typescript": "2.1.5"
+    "@types/jquery": "^3.3.29",
+    "typescript": "~3.3.3333"
   }
 }
