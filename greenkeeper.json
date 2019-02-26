@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "mod-01/package.json",
+        "mod-02/package.json",
+        "mod-03/MoviesApp/package.json",
+        "mod-04/demo-app/package.json",
+        "mod-04/zones-demo/package.json",
+        "mod-05/demo-app/package.json",
+        "mod-06/movies-app/package.json",
+        "mod-06/rxjs-demo/package.json",
+        "mod-07/package.json",
+        "mod-08/package.json"
+      ]
+    }
+  }
+}
